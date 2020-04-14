@@ -43,8 +43,7 @@ x.var.day <- names(forest.fires)[4]
 y.var <- names(forest.fires)[5:12]
 
 # plot for month and day using purrr
-map2(x.var.month, y.var, CreateBoxplot)
-map2(x.var.day, y.var, CreateBoxplot)
-map2
+boxplot.month <- map2(x.var.month, y.var, CreateBoxplot)
+boxplot.day <- map2(x.var.day, y.var, CreateBoxplot)
 
 
