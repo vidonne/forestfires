@@ -46,4 +46,15 @@ y.var <- names(forest.fires)[5:12]
 boxplot.month <- map2(x.var.month, y.var, CreateBoxplot)
 boxplot.day <- map2(x.var.day, y.var, CreateBoxplot)
 
+# Create a scatterplot function
+CreateScatterPlot <- function(x, y) {
+  ggplot(data = forest.fires) +
+    aes_string(x = x, y = y) +
+    geom_point()
+}
 
+# assign value to x and y
+x.var <- names(forest.fires)[5:12]
+y.var <- names(forest.fires)[13]
+
+map2(x.var, y.var, CreateScatterPlot)
